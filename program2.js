@@ -1,19 +1,24 @@
-const laptop={
-    make:'dell ,lenovo',
-    medel:'alienware',
-    memory:['SSD','HDD'],
-    cores:8,
-    memorySize:[256,512]
+const employees = {
+    1: {
+        id: 1,
+        name: "John",
+        occupation: "Back-end Engineer"
+    },
+    2: {
+        id: 2,
+        name: "Nitesh",
+        occupation: "Front-end Engineer"
+    },
+    education:{
+        School:'jai swal high school',
+        board:'BSEB',
+        Year:2017
+    }
+
 };
 
-console.log(laptop);
+const cloneEmployee=Object.assign({},employees);
 
-console.log(Object.keys(laptop));
-
-console.log(Object.entries(laptop));
-console.log(Object.values(laptop));
-
-const laptopCopy=Object.assign({},laptop);
-
-console.log(laptopCopy);
-
+for([key,value] of  Object.entries(cloneEmployee)){
+    console.log(value);
+}
